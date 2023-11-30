@@ -81,3 +81,9 @@ def goodmanKruska_tau_y(df, x: str, y: str) -> float:
     tau_y = (E_1 - E_2) / E_1
 
     return tau_y
+def 有序变量描述统计函数(表名, 变量名):
+    result = 表名[变量名].value_counts(sort=False)
+    描述统计表 = pd.DataFrame(result)
+    描述统计表['比例'] = 描述统计表['count'].value_counts(normalize=True)
+    描述统计表['累计比例'] = 描述统计表['比例'].cumsum()
+    return 描述统计表
