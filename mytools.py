@@ -43,8 +43,8 @@ def goodmanKruska_tau_y(df, x: str, y: str) -> float:
     """
     计算两个定类变量的goodmanKruska_tau_y相关系数
 
-    df：包含定类变量的数据框
-    x：数据框中作为自变量的定类变量名称
+    df:包含定类变量的数据框
+    x:数据框中作为自变量的定类变量名称
     y: 数据框中作为因变量的定类变量名称
 
     函数返回tau_y相关系数
@@ -99,7 +99,7 @@ def 两个无序类别变量的统计分析(数据表, 自变量, 因变量):
 
     print(F"tau_y系数:{tau_y: 0.4f}", 相关系数判断(tau_y))
     print(tabulate(交互表))
-    print(F"卡方值：{chi2: .2f}, p值：{p: .4f},自由度:{dof}。")
+    print(F"卡方值：{chi2: .2f}, p值:{p: .4f},自由度:{dof}。")
     print(p值判断(p))
 
 
@@ -115,5 +115,5 @@ def 两个有序类别变量的统计分析(数据表, 自变量, 因变量):
 
     print(F"Somers dy系数:{d_y: 0.4f}", 相关系数判断(d_y))
     print(tabulate(交互表))
-    print(F"p值：{p: .4f}")
+    print(F"p值:{p: .4f}")
     print(p值判断(p))
